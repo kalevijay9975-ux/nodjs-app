@@ -2,14 +2,13 @@ pipeline {
     agent any
 
     environment {
-        SERVER_IP      = 'target-server - private ip'   
-        SSH_CREDENTIAL = 'your-key'
-        REPO_URL       = 'your url'
+        SERVER_IP      = '172.31.2.243'
+        SSH_CREDENTIAL = 'mykey'
+        REPO_URL       = 'https://github.com/kalevijay9975-ux/node-js-app.git'
         BRANCH         = 'main'
         REMOTE_USER    = 'ubuntu'
-        REMOTE_PATH    = '/home/ubuntu/<your folder name>'
+        REMOTE_PATH    = '/home/ubuntu/node-js-app'
     }
-    
     
     stages {
         stage('Clone Repository') {
